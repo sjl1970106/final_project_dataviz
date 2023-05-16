@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Risk Behavior in Portugese Youth</title>
+        <title>Voter Behavior Charts</title>
         <style>
         	html {
 				margin: 80px 80px;
@@ -11,27 +11,26 @@
 			body { 
 				font: 100% georgia, sans-serif;
 				line-height: 1.8em;
-				color: #222222; 
-				height:100%;
-				background-color: #fff8f9;
+				color: #555753; 
+				height:100%
 			}
 		
 			header {
-				  background-color: #355C7D;
+				  background-color: #666;
 				  padding: 10px;
 				  text-align: center;
 				  font-size: 20px;
 				  color: white;
 				}
 			footer {
-				  background-color: #355C7D;
+				  background-color: #666;
 				  padding: 5px;
 				  text-align: center;
 				  font-size: 20px;
 				  color: white;
 				}
 			.link:hover {
-			  	color: #FFFFFF;
+			  	color: #f1f1f1;
 			}
 			.sidebar {
 				  height: 100%;
@@ -40,7 +39,7 @@
 				  z-index: 1;
 				  top: 0;
 				  left: 0;
-				  background-color: #6C5B7B;
+				  background-color: #D3D3D3;
 				  border: #000000;
 				  overflow-x: hidden;
 				  transition: 0.5s;
@@ -51,7 +50,7 @@
 				  padding: 0px 8px 8px 32px;
 				  text-decoration: none;
 				  font-size: 25px;
-				  color: #D3D3D3;
+				  color: #818181;
 				  display: block;
 				  transition: 0.3s;
 				}
@@ -74,7 +73,7 @@
 				  top: 0;
 				  left: 0;
 				  cursor: pointer;
-				  background-color: #C06C84;
+				  background-color: #111;
 				  color: white;
 				  padding: 10px 15px;
 				  border: none;
@@ -90,56 +89,46 @@
 	    <a id="Top"> </a> 
 	<div id="mySidebar" class="sidebar">
 		  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-		      <a class="link" href="#FamilyTraits"> Family Traits</a>
-		      <a class="link" href="#GoingOut">Going Out Behavior</a>
-		      <a class="link" href="#Health">Health Outcomes</a>
-		      <a class="link" href="#Grades">Grade Outcomes</a></li>
+		      <a class="link" href="#ParCat"> Voter Patterns (Parallel Categories Plot)</a>
+		      <a class="link" href="#Bubble">Turnout Over Time (Bubble Plot)</a>
+		      <a class="link" href="#Choro">Turnout by Locality (Choropleth)</a>
+		      <a class="link" href="#Changes">Layout Changes</a></li>
 	</div>
 
   	<button class="openbtn" onclick="openNav()">☰ Contents</button>
 	  
 	
 	<header>
-	<h1 style="line-height:150%">Analyzing Drinking Behavior in Teens</h1>
-	<p> Final project for Data Visualization (Data 303)</p>
-	<p> By Renee Ritchey & Sarah Larimer</p>	
+	<h1 style="line-height:150%">Discussing Election Data in Virginia Through Data Visualizations</h1>
+	<p> This webpage is produced for the Data Visualization Interacting with Data Assignment. It evaluates a variety of voting data for the state of Virginia and presents it through different visualizations.<a class="link" href="https://github.com/fivethirtyeight/data/tree/master/non-voters">Data</a> for the first chart comes from a sample of 5,239 verified respondents surveyed as part of a poll for FiveThirtyEight. Data for the second and third charts comes from data provided by the state of Virginia (<a class="link" href="https://apps.elections.virginia.gov/SBE_CSV/ELECTIONS/ELECTIONTURNOUT/">Link</a>) and the Demographics Research Group at the University of Virginia (<a class="link" href="https://demographics.coopercenter.org">Link</a>).</p>
 	</header>
 
-	<a id="FamilyTraits">	
-    	<h2>Alcohol Consumption & Family Traits </h2>
-	<p>The first aspect we wanted to look at for who is more likely to drink is how family dynamics are
-related to weekend drinking habits. We looked at the distribution of weekend alcohol
-consumption in relation to whether or not parents are still together and whether or not the
-student lives in an urban or rural environment. As you can see from the visualization below…..</p>
-    	<iframe src="urban_parent_hist-2.png" title="Family Traits" width = "120%" 
-	frameBorder="0"></iframe>
-        </a>
-	
-	<a id="GoingOut">         
-     	<h2>Alcohol Consumption and Going Out Behavior</h2>
-	<p>The second question we wanted to ask was to confirm our hypothesis that the more days a week a
-teenager goes out, the more likely they are to drink. As you can see from this graph below, this
-is exactly what we see in the data.<p/>
-		<center>
-	</center>
+
+	<a id="ParCat">    
+    	<h2>Voter Patterns (Parallel Categories Plot)</h2>
+    	<iframe src="categories.html" title="Voter Frequency" width = "100%" height = "100%" 
+    	frameBorder="0"></iframe>
+	<p>This visualization shows and interesting relationship between how frequently people vote and how that is realted to demographic factors such as income and education. From this chart, it appears as if people who always vote have on average a higher income and education level than those who do not vote or vote sporadically. However, this chart only shows us information on these three cateogries. Voter behavior might actually be driven by another confounding factor. As we looked at in class, older people are more likely to vote than middle aged people, so this plot might be reflecting this counfounding factor subtly. In conclusion, it appears as if there is a slight relationship between voting behavior, income, and education. However this does not mean that there are not other factors that explain and/or predict behavior. </p>
         </a>
 	    
-	<a id="Health">
-    	<h2> Alcohol Consumption and Health Outcomes</h2>
-	<p>Now that we know who is more likely to drink, the second question we wanted to evaluate is
-what are the consequences of elevated drinking behaviors. The first question we answered was
-what are the health effects of high risk behavior. We attempted to demonstrate this through the visualization below.</p>
-	</a>
-	
-	<a id="Grades">
-    	<h2> Alcohol Consumption and Grade Outcomes</h2>
-	<p>Lastly, the other consequential thing we wanted to see through visualization was the impact of
-high risk behavior on school. Through this, we can see not only how alcohol consumption
-impacts health outcomes but also educational outcomes. Through the plot below, you can see that students who drink more are more likely to drink more.</p>
-    	<iframe src="grade_density.png" title="Grade Outcomes" width = "100%" height = "100%" 
+	<a id="Bubble">         
+     	<h2>Turnout Over Time (Bubble Plot)</h2>
+    	<iframe src="bubble.html" title="Voter Turnout: Bubble" width = "100%" height = "100%" 
     	frameBorder="0"></iframe> 
-	<p>INSET Grade OUTCOMES STUFF EHRE</p>
+	<p> This bubble plot shows trends that are to be expected. First, in non-presidential election years, voter turnout is signifcantly lower than in presidential election years. In 2020, absentee voting was very high in comparison to previous years which is to be expected because of the pandemic. While absentee voting decreased in 2022, it is still higher than pre-pandemic elections. In 2020, there was also much higher percent turnout across all localities. While there seem to be no impact of region on voter trends, it is interesting that that largest outliers (with low absentee voting) are from the same region. </p>
+        </a>
+	    
+	<a id="Choro">
+    	<h2>Turnout by Locality (Choropleth)</h2>
+    	<iframe src="map.html" title="Voter Turnout: Map" width = "100%" height = "100%" 
+    	frameBorder="0"></iframe> 
+	<p>The northeast part of Virginia has a higher voter turnoutout on average than the southwest areas. This is with the notable exception of a few localities on the coast that have lower voter turnout than their surrounding areas. Furthermore, groups of higher voter turnout and lower voter turnout are clustered together. These trends are what we would expect given what we know about Virginia. Voter turnout is higher in more urban areas and lower in more rural areas. What is surprising is that in relatively smei-urban areas on the coast like Norfolk, Hampton, and Newport News have lower turnout than expected. Similarily, localities in the northern part of the state around DC have lower turnout than we would expect. </p>
 	</a>
+	    
+	<a id="Changes">         
+     	<h2>Layout Changes</h2>
+	<p>We made a variety of layout changes to increase the readibility of the webpage. First, we included a header that gives the reader a brief summary of what the webpage is and where the data we use comes from. The header is also visually separated from the body of the website with a different background and text color. This helps to increase readibility by orienting the reader instead of just tossing them into a webpage with no explanation. The color change helps readibility by visually denoting what is the introduction and what is the body. Second, we experimented with 2 types of links, to external websites and to other parts of the page. This increased readibility by letting the reader access other information without the clunky full link (for the hyperlinks to the data) and allowed the reader to quickly navigate to the part of the page they were interested in without having to scroll through things they were not looking for (internal links). We also added a different hover color for links to more easily show the reader when they were hovering on a link. The sidebar and the hover link color were the two elements that presented challenges. For the link hover, it was a slight challenge because it had to be done as a CSS class instead of just using the basic HTML tags. The sidebar was also difficult to format and make sure that it was the correct size and position in relation to the body of the content. </p>
+        </a>
 		
 	<footer>
 	<p> <a class="link" href="#Top">Top</a> </p>
@@ -154,6 +143,7 @@ impacts health outcomes but also educational outcomes. Through the plot below, y
 	  document.getElementById("mySidebar").style.width = "0";
 	}
 	</script>
-   	    
+   
+	  	    
     </body>
 </html>
