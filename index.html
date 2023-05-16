@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Voter Behavior Charts</title>
+        <title>Risk Behavior in Portugese Youth</title>
         <style>
         	html {
 				margin: 80px 80px;
@@ -11,26 +11,27 @@
 			body { 
 				font: 100% georgia, sans-serif;
 				line-height: 1.8em;
-				color: #555753; 
+				color: #222222; 
+				background-color: #fff8f9;
 				height:100%
 			}
 		
 			header {
-				  background-color: #666;
+				  background-color: #355C7D;
 				  padding: 10px;
 				  text-align: center;
 				  font-size: 20px;
 				  color: white;
 				}
 			footer {
-				  background-color: #666;
+				  background-color: #355C7D;
 				  padding: 5px;
 				  text-align: center;
 				  font-size: 20px;
 				  color: white;
 				}
 			.link:hover {
-			  	color: #f1f1f1;
+			  	color: #FFFFFF;
 			}
 			.sidebar {
 				  height: 100%;
@@ -39,7 +40,7 @@
 				  z-index: 1;
 				  top: 0;
 				  left: 0;
-				  background-color: #D3D3D3;
+				  background-color: #6C5B7B;
 				  border: #000000;
 				  overflow-x: hidden;
 				  transition: 0.5s;
@@ -50,7 +51,7 @@
 				  padding: 0px 8px 8px 32px;
 				  text-decoration: none;
 				  font-size: 25px;
-				  color: #818181;
+				  color: #D3D3D3;
 				  display: block;
 				  transition: 0.3s;
 				}
@@ -105,30 +106,32 @@
 
 
 	<a id="ParCat">    
-    	<h2>Voter Patterns (Parallel Categories Plot)</h2>
-    	<iframe src="categories.html" title="Voter Frequency" width = "100%" height = "100%" 
+    	<h2>Going Out</h2>
+    	<iframe src="stakedalc.png" title="GoungOut" width = "100%" 
     	frameBorder="0"></iframe>
 	<p>This visualization shows and interesting relationship between how frequently people vote and how that is realted to demographic factors such as income and education. From this chart, it appears as if people who always vote have on average a higher income and education level than those who do not vote or vote sporadically. However, this chart only shows us information on these three cateogries. Voter behavior might actually be driven by another confounding factor. As we looked at in class, older people are more likely to vote than middle aged people, so this plot might be reflecting this counfounding factor subtly. In conclusion, it appears as if there is a slight relationship between voting behavior, income, and education. However this does not mean that there are not other factors that explain and/or predict behavior. </p>
         </a>
 	    
 	<a id="Bubble">         
-     	<h2>Turnout Over Time (Bubble Plot)</h2>
-    	<iframe src="bubble.html" title="Voter Turnout: Bubble" width = "100%" height = "100%" 
+     	<h2>Family Traits</h2>
+    	<iframe src="urban_parent_hist-2.png" title="Parent Traits" width = "100%" 
     	frameBorder="0"></iframe> 
 	<p> This bubble plot shows trends that are to be expected. First, in non-presidential election years, voter turnout is signifcantly lower than in presidential election years. In 2020, absentee voting was very high in comparison to previous years which is to be expected because of the pandemic. While absentee voting decreased in 2022, it is still higher than pre-pandemic elections. In 2020, there was also much higher percent turnout across all localities. While there seem to be no impact of region on voter trends, it is interesting that that largest outliers (with low absentee voting) are from the same region. </p>
         </a>
 	    
 	<a id="Choro">
-    	<h2>Turnout by Locality (Choropleth)</h2>
-    	<iframe src="map.html" title="Voter Turnout: Map" width = "100%" height = "100%" 
+    	<h2>Health</h2>
+    	<iframe src="parcat_alc-3.html" title="Health" width = "100%" height = "100%" 
     	frameBorder="0"></iframe> 
 	<p>The northeast part of Virginia has a higher voter turnoutout on average than the southwest areas. This is with the notable exception of a few localities on the coast that have lower voter turnout than their surrounding areas. Furthermore, groups of higher voter turnout and lower voter turnout are clustered together. These trends are what we would expect given what we know about Virginia. Voter turnout is higher in more urban areas and lower in more rural areas. What is surprising is that in relatively smei-urban areas on the coast like Norfolk, Hampton, and Newport News have lower turnout than expected. Similarily, localities in the northern part of the state around DC have lower turnout than we would expect. </p>
 	</a>
 	    
-	<a id="Changes">         
-     	<h2>Layout Changes</h2>
-	<p>We made a variety of layout changes to increase the readibility of the webpage. First, we included a header that gives the reader a brief summary of what the webpage is and where the data we use comes from. The header is also visually separated from the body of the website with a different background and text color. This helps to increase readibility by orienting the reader instead of just tossing them into a webpage with no explanation. The color change helps readibility by visually denoting what is the introduction and what is the body. Second, we experimented with 2 types of links, to external websites and to other parts of the page. This increased readibility by letting the reader access other information without the clunky full link (for the hyperlinks to the data) and allowed the reader to quickly navigate to the part of the page they were interested in without having to scroll through things they were not looking for (internal links). We also added a different hover color for links to more easily show the reader when they were hovering on a link. The sidebar and the hover link color were the two elements that presented challenges. For the link hover, it was a slight challenge because it had to be done as a CSS class instead of just using the basic HTML tags. The sidebar was also difficult to format and make sure that it was the correct size and position in relation to the body of the content. </p>
-        </a>
+	<a id="Choro">
+    	<h2>Grades</h2>
+    	<iframe src="grade_density.png" title="Grades" width = "100%" height = "100%" 
+    	frameBorder="0"></iframe> 
+	<p>The northeast part of Virginia has a higher voter turnoutout on average than the southwest areas. This is with the notable exception of a few localities on the coast that have lower voter turnout than their surrounding areas. Furthermore, groups of higher voter turnout and lower voter turnout are clustered together. These trends are what we would expect given what we know about Virginia. Voter turnout is higher in more urban areas and lower in more rural areas. What is surprising is that in relatively smei-urban areas on the coast like Norfolk, Hampton, and Newport News have lower turnout than expected. Similarily, localities in the northern part of the state around DC have lower turnout than we would expect. </p>
+	</a>
 		
 	<footer>
 	<p> <a class="link" href="#Top">Top</a> </p>
